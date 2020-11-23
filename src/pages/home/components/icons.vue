@@ -88,6 +88,7 @@ computed:{
 @import '~styles/varibles.styl';
 @import '~styles/mixins.styl';
 .icons>>>.swiper-container
+ margin-top:.1rem
  width:100%
  height:0
  padding-bottom:50%
