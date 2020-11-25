@@ -42,6 +42,7 @@ export default {
    padding:.1rem
    min-width:0
    .item-name 
+    margin-top:.1rem
     height:0.54rem
     font-size:.32rem
     ellipsis()
