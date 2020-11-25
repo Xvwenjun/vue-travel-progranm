@@ -2,10 +2,10 @@
 <div>
    <div class="title">热销推荐</div>
    <ul>
-       <li class="item border-bottom " v-for="item of recommendList" :key="item.id">
+       <li class="item border-bottom " v-for="item of list" :key="item.id">
              <img  class="item-img" :src="item.imgUrl">
            <div class="item-info">
-               <p class="item-name">{{item.name}}</p>
+               <p class="item-name">{{item.title}}</p>
                <p class="item-desc">{{item.desc}}</p>
                <button class="item-more">查看详情</button>
            </div>
@@ -17,30 +17,9 @@
 <script>
 export default {
     name:'HomeRecommends',
-    data(){
-      return {
-        recommendList:[
-          {
-            id:'0001',
-            name:'含往返飞机票+4晚住宿',
-            desc:'【跟团游】店长推荐🌞 下单立减!赠人鱼秀/旅拍＋海底餐厅+蜈支洲南山天涯+海边5日住',
-            imgUrl:'https://imgs.qunarzz.com/p/p70/1809/e7/4941057a6aae702.jpg_256x160_9fee6ccb.jpg'
-          },
-          {
-            id:'0002',
-            name:'含往返飞机票+4晚住宿',
-            desc:'【跟团游】店长推荐🌞 下单立减!赠人鱼秀/旅拍＋海底餐厅+蜈支洲南山天涯+海边5日住',
-            imgUrl:'https://imgs.qunarzz.com/p/p70/1809/e7/4941057a6aae702.jpg_256x160_9fee6ccb.jpg'
-          },
-          {
-            id:'0003',
-            name:'含往返飞机票+4晚住宿',
-            desc:'【跟团游】店长推荐🌞 下单立减!赠人鱼秀/旅拍＋海底餐厅+蜈支洲南山天涯+海边5日住',
-            imgUrl:'https://imgs.qunarzz.com/p/p70/1809/e7/4941057a6aae702.jpg_256x160_9fee6ccb.jpg'
-          }
-        ]        
-      }
-    }
+    props:{
+      list:Array
+     }
 }
 </script>
 <style lang="stylus" scoped>
