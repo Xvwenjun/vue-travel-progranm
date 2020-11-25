@@ -1,16 +1,14 @@
 <template>
 <ul class="item-list">
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
-    <li class="item">A</li>
+    <li class="item" v-for="(item,key) of all" :key="key">{{key}}</li>
 </ul>
 </template>
 <script> 
 export default {
-    name:"CityAlphabet"
+    name:"CityAlphabet",
+    props:{
+        all:Object
+    }
 }
 </script>
 
