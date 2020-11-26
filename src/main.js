@@ -9,6 +9,7 @@ import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
 import 'swiper/dist/css/swiper.css'
+import store from './store/index.js'
 
 
 
@@ -20,6 +21,7 @@ Vue.use(VueAwesomeSwiper, /* { default options with global component } */ )
 new Vue({
     el: '#app',
     router,
+    store,
     components: { App },
     template: '<App/>'
 })

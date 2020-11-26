@@ -9,6 +9,7 @@
          <li class="search-item border-bottom"
          v-for="item in list"
          :key="item.id"
+         @click="cityChange(item.name)"
         >
         {{item.name}}</li>
          <li class="search-item border-bottom"
@@ -31,6 +32,12 @@ export default {
           timer:null
        }
     },
+      methods:{
+         cityChange(city){
+            this.$store.commit('cityChange',city)
+            this.$router.push('/')
+        }
+      },
     computed:{
        hasnoCity(){
           return !this.list.length
