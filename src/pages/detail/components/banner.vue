@@ -2,16 +2,16 @@
     <div class="banner"
      @click="handleBannerClick">
        <img class="banner-img" 
-            src="https://imgs.qunarzz.com/p/p19/1809/b9/2a3d362aabcbb02.jpg_256x160_28907832.jpg">
+            :src="bannerImg">
        <div class="banner-info">
-           <div class="banner-title">AAAAA</div>
+           <div class="banner-title">{{this.sightName}}</div>
            <div class="banner-number">
                <span class="iconfont banner-icon">&#xe603;</span>
-               89
+               {{this.gallaryImgs.length}}
            </div>
        </div>
        <common-gallary 
-       :imgs="imgs"
+       :imgs="gallaryImgs"
        v-if="gallaryOpen"
        @close="handleGallaryClose"
        ></common-gallary>
@@ -21,11 +21,16 @@
 import CommonGallary from 'common/Gallary/gallary'
 export default {
     name:'DetailBanner',
+    props:{
+        sightName:String,
+        bannerImg:String,
+        gallaryImgs:Array
+    },
     data(){
-        return {
-            gallaryOpen:false,
-            imgs:["https://dss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/netdisk.1.11fa0a03.a_x_X6PQABO9hkBAi6pVnw.jpg","https://dss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/item/netdisk.1.11fa0a03.a_x_X6PQABO9hkBAi6pVnw.jpg"]
+        return{
+            gallaryOpen:false
         }
+        
     },
     components:{
         CommonGallary

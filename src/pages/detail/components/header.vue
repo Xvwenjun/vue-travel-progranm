@@ -9,8 +9,6 @@
         </router-link>
         景点详情
     </div>
-    <div class="hig">
-    </div>
 </div>  
 </template>
 <script>
@@ -64,6 +62,7 @@ export default {
    font-size:.4rem
  .header-fix
   position:fixed
+  z-index:2
   top:0
   left:0
   right:0
@@ -81,7 +80,5 @@ export default {
    text-align:center
    font-size:.4rem
    color:#fff
- .hig
-   height:100rem
-   background:pink
+ 
 </style>

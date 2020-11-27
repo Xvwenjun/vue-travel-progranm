@@ -1,5 +1,5 @@
 <template>
-   <div class="container"  @click="handleGallaryClose">
+   <div class="container"  @click.stop="handleGallaryClose">
        <div class="wrapper">
             <swiper :options="swiperOptions">
             <swiper-slide  v-for="(item,index) in imgs"
@@ -18,12 +18,7 @@
 export default {
     name:"CommonGallary",
     props:{
-            imgs:{
-                type:Array,
-                default(){
-                    return []
-                }
-            }
+         imgs:Array
     },
     methods:{
         handleGallaryClose(){
